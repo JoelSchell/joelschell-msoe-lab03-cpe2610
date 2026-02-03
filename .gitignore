@@ -4,4 +4,4 @@ Debug/
 *.ld
 startup/
 *.launch
-
+.vscode/
