@@ -1,8 +1,8 @@
 /**
- * Name: ______
+ * Name: Joel Schellinger
  * Course: CPE2610
  * Assignment: Lab2
- * Dependancies: none
+ * Dependencies: none
  * Description: Portable Header file containing STM32F411 Addresses and Control Bit Masks
  */
 
@@ -29,6 +29,7 @@
 #define GPIOA_PUPDR 0x4002000C
 #define GPIOA_IDR 	0x40020010
 #define GPIOA_ODR 	0x40020014
+#define GIPOA_BSRR  0x40020018
 #define GPIOA_AFRL  0x40020020
 
 //GPIOB
@@ -36,6 +37,7 @@
 #define GPIOB_PUPDR 0x4002040C
 #define GPIOB_IDR 	0x40020410
 #define GPIOB_ODR	0x40020414
+#define GIPOB_BSRR  0x40020418
 #define GPIOB_AFRL  0x40020420
 
 //UART
@@ -54,9 +56,5 @@
 // SR control bits
 #define TXE_MASK (1<<7)
 #define RXNE_MASK (1<<6)
-
-
-
-
 
 #endif /* REGADDR_H_ */

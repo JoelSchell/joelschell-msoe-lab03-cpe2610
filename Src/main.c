@@ -19,6 +19,9 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "uart.h"
+#include "led.h"
+#include "delay.h"
+
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -27,10 +30,17 @@
 int main(void)
 {
 	initUsart2();
+	initLeds();
+	setLeds(0b1111);
+	setLeds(0b0110);
 	// Clear terminal screen and move cursor to top-left
 	printf("\033[2J\033[H");
 	printf("Hello World\r\n");
 	uint8_t press_count = 0;
+	for(int i = 0;; i++) {
+		delay_ms(500);
+		setLeds(1U << (i % 4));
+	}
     /* Loop forever */
 	for(;;) {
 

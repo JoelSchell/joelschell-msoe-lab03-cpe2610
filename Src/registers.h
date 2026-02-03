@@ -1,12 +1,15 @@
-/*
- * registers.h
- *
- *  Created on: Feb 2, 2026
- *      Author: schellingerjf
+/**
+ * Name: Joel Schellinger
+ * Course: CPE2610
+ * Assignment: Lab2
+ * Dependencies: none
+ * Description: Portable Header file containing STM32F411 Addresses as structs
  */
 
 #ifndef REGISTERS_H_
 #define REGISTERS_H_
+
+#include <stdint.h>
 
 typedef struct
 {
